@@ -16,4 +16,4 @@ Features:
   Various buttons have yet to be assigned.
   
   To use:
-  Run "python ./hui-osc.py --midiport port" where port is the midi port of your control surface. This assumes a correctly setup alsa and midi config, if you have /dev/snd/seq that is a good sign your midi device is working. You can use aseqdump -l to get the midi port number of your control surface.
+  Run "python ./hui-osc.py --port daw_port --midiport midi_port" where daw_port is the udp port your DAW is listening on for OSC and midi_port is the midi port of your control surface. This assumes a correctly setup alsa and midi config, if you have /dev/snd/seq that is a good sign your midi device is working. You can use aseqdump -l to get the midi port number of your control surface.
