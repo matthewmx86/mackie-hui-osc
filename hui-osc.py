@@ -74,7 +74,6 @@ def midi_listen():
         if 0 <= input0 <= 7 and 0 <= input1 <= 127 and 32 <= input2 <= 39:
             channel=(input0+1)+(bank_count*active_bank); volume=input1+input1+1
             if input3 == 64:
-                print(volume)
                 volume=volume+1
             volume=volume/254
             chan_function["chan_vol"]["channel"+str(channel)]=volume
