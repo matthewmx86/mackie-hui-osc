@@ -16,5 +16,4 @@ Features:
   Various buttons have yet to be assigned.
   
   To use:
-  Run "python ./hui-osc.py" or chmod +x hui-osc.py and run directly. This assumes a correctly setup alsa and midi config, if you have /dev/snd/seq that is a good sign your midi device is working.
-  
+  Run "python ./hui-osc.py --midiport port" where port is the midi port of your control surface. This assumes a correctly setup alsa and midi config, if you have /dev/snd/seq that is a good sign your midi device is working. You can use aseqdump -l to get the midi port number of your control surface.
