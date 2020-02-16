@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 #!python
 
-import argparse
-import time
-import os,sys,threading,string
-import rtmidi
+import argparse,time,os,sys,threading,string,rtmidi
 from multiprocessing import Process
 from pythonosc import dispatcher
 from pythonosc import osc_server
