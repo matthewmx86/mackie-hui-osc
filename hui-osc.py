@@ -135,7 +135,7 @@ def midi_listen():
         return
 
     midiIn = rtmidi.MidiIn()
-    midiIn.open_port(1)
+    midiIn.open_port(int(args.midiport))
     while True:
         #reduce cpu usage, no noticable performance loss
         time.sleep(0.00001)
@@ -162,7 +162,7 @@ def osc_listen():
             started
         except:
             started = 0
-            midiout.open_port(1)
+            midiout.open_port(int(args.midiport))
 
         #Dont blank LCD output notes
         if data[0] == 176 and 98 <= data[1] <= 99 :
@@ -307,6 +307,8 @@ def osc_listen():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--midiport", default=1,
+        help="The midi port of your control surface")
     parser.add_argument("--ip", default="127.0.0.1",
         help="The ip of the OSC server")
     parser.add_argument("--port", type=int, default=3819,
