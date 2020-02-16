@@ -15,3 +15,6 @@ Features:
   The mute / solo lights are not functional yet.
   Various buttons have yet to be assigned.
   
+  To use:
+  Run "python ./hui-osc.py" or chmod +x hui-osc.py and run directly. This assumes a correctly setup alsa and midi config, if you have /dev/snd/seq that is a good sign your midi device is working.
+  
